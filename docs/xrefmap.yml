@@ -1,0 +1,222 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: JsonDtoMapper
+  name: JsonDtoMapper
+  href: api/JsonDtoMapper.html
+  commentId: N:JsonDtoMapper
+  fullName: JsonDtoMapper
+  nameWithType: JsonDtoMapper
+- uid: JsonDtoMapper.IEntityMap
+  name: IEntityMap
+  href: api/JsonDtoMapper.IEntityMap.html
+  commentId: T:JsonDtoMapper.IEntityMap
+  fullName: JsonDtoMapper.IEntityMap
+  nameWithType: IEntityMap
+- uid: JsonDtoMapper.IEntityMap.ID
+  name: ID
+  href: api/JsonDtoMapper.IEntityMap.html#JsonDtoMapper_IEntityMap_ID
+  commentId: P:JsonDtoMapper.IEntityMap.ID
+  fullName: JsonDtoMapper.IEntityMap.ID
+  nameWithType: IEntityMap.ID
+- uid: JsonDtoMapper.IEntityMap.ID*
+  name: ID
+  href: api/JsonDtoMapper.IEntityMap.html#JsonDtoMapper_IEntityMap_ID_
+  commentId: Overload:JsonDtoMapper.IEntityMap.ID
+  isSpec: "True"
+  fullName: JsonDtoMapper.IEntityMap.ID
+  nameWithType: IEntityMap.ID
+- uid: JsonDtoMapper.IEntityMap.Map(System.Object)
+  name: Map(Object)
+  href: api/JsonDtoMapper.IEntityMap.html#JsonDtoMapper_IEntityMap_Map_System_Object_
+  commentId: M:JsonDtoMapper.IEntityMap.Map(System.Object)
+  fullName: JsonDtoMapper.IEntityMap.Map(System.Object)
+  nameWithType: IEntityMap.Map(Object)
+- uid: JsonDtoMapper.IEntityMap.Map*
+  name: Map
+  href: api/JsonDtoMapper.IEntityMap.html#JsonDtoMapper_IEntityMap_Map_
+  commentId: Overload:JsonDtoMapper.IEntityMap.Map
+  isSpec: "True"
+  fullName: JsonDtoMapper.IEntityMap.Map
+  nameWithType: IEntityMap.Map
+- uid: JsonDtoMapper.JsonDtoMapper
+  name: JsonDtoMapper
+  href: api/JsonDtoMapper.JsonDtoMapper.html
+  commentId: T:JsonDtoMapper.JsonDtoMapper
+  fullName: JsonDtoMapper.JsonDtoMapper
+  nameWithType: JsonDtoMapper
+- uid: JsonDtoMapper.JsonDtoMapper.Map(System.Object,System.String)
+  name: Map(Object, String)
+  href: api/JsonDtoMapper.JsonDtoMapper.html#JsonDtoMapper_JsonDtoMapper_Map_System_Object_System_String_
+  commentId: M:JsonDtoMapper.JsonDtoMapper.Map(System.Object,System.String)
+  fullName: JsonDtoMapper.JsonDtoMapper.Map(System.Object, System.String)
+  nameWithType: JsonDtoMapper.Map(Object, String)
+- uid: JsonDtoMapper.JsonDtoMapper.Map*
+  name: Map
+  href: api/JsonDtoMapper.JsonDtoMapper.html#JsonDtoMapper_JsonDtoMapper_Map_
+  commentId: Overload:JsonDtoMapper.JsonDtoMapper.Map
+  isSpec: "True"
+  fullName: JsonDtoMapper.JsonDtoMapper.Map
+  nameWithType: JsonDtoMapper.Map
+- uid: JsonDtoMapper.JsonDtoMapper.RegisterMapper(JsonDtoMapper.IEntityMap)
+  name: RegisterMapper(IEntityMap)
+  href: api/JsonDtoMapper.JsonDtoMapper.html#JsonDtoMapper_JsonDtoMapper_RegisterMapper_JsonDtoMapper_IEntityMap_
+  commentId: M:JsonDtoMapper.JsonDtoMapper.RegisterMapper(JsonDtoMapper.IEntityMap)
+  fullName: JsonDtoMapper.JsonDtoMapper.RegisterMapper(JsonDtoMapper.IEntityMap)
+  nameWithType: JsonDtoMapper.RegisterMapper(IEntityMap)
+- uid: JsonDtoMapper.JsonDtoMapper.RegisterMapper*
+  name: RegisterMapper
+  href: api/JsonDtoMapper.JsonDtoMapper.html#JsonDtoMapper_JsonDtoMapper_RegisterMapper_
+  commentId: Overload:JsonDtoMapper.JsonDtoMapper.RegisterMapper
+  isSpec: "True"
+  fullName: JsonDtoMapper.JsonDtoMapper.RegisterMapper
+  nameWithType: JsonDtoMapper.RegisterMapper
+- uid: JsonDtoMapper.JsonDtoMapper.RegisterMappers(JsonDtoMapper.IEntityMap[])
+  name: RegisterMappers(IEntityMap[])
+  href: api/JsonDtoMapper.JsonDtoMapper.html#JsonDtoMapper_JsonDtoMapper_RegisterMappers_JsonDtoMapper_IEntityMap___
+  commentId: M:JsonDtoMapper.JsonDtoMapper.RegisterMappers(JsonDtoMapper.IEntityMap[])
+  name.vb: RegisterMappers(IEntityMap())
+  fullName: JsonDtoMapper.JsonDtoMapper.RegisterMappers(JsonDtoMapper.IEntityMap[])
+  fullName.vb: JsonDtoMapper.JsonDtoMapper.RegisterMappers(JsonDtoMapper.IEntityMap())
+  nameWithType: JsonDtoMapper.RegisterMappers(IEntityMap[])
+  nameWithType.vb: JsonDtoMapper.RegisterMappers(IEntityMap())
+- uid: JsonDtoMapper.JsonDtoMapper.RegisterMappers*
+  name: RegisterMappers
+  href: api/JsonDtoMapper.JsonDtoMapper.html#JsonDtoMapper_JsonDtoMapper_RegisterMappers_
+  commentId: Overload:JsonDtoMapper.JsonDtoMapper.RegisterMappers
+  isSpec: "True"
+  fullName: JsonDtoMapper.JsonDtoMapper.RegisterMappers
+  nameWithType: JsonDtoMapper.RegisterMappers
+- uid: JsonDtoMapper.JsonDtoMapper.Settings
+  name: Settings
+  href: api/JsonDtoMapper.JsonDtoMapper.html#JsonDtoMapper_JsonDtoMapper_Settings
+  commentId: F:JsonDtoMapper.JsonDtoMapper.Settings
+  fullName: JsonDtoMapper.JsonDtoMapper.Settings
+  nameWithType: JsonDtoMapper.Settings
+- uid: JsonDtoMapper.JsonDtoMapperSettings
+  name: JsonDtoMapperSettings
+  href: api/JsonDtoMapper.JsonDtoMapperSettings.html
+  commentId: T:JsonDtoMapper.JsonDtoMapperSettings
+  fullName: JsonDtoMapper.JsonDtoMapperSettings
+  nameWithType: JsonDtoMapperSettings
+- uid: JsonDtoMapper.JsonDtoMapperSettings.JsonSerializerSettings
+  name: JsonSerializerSettings
+  href: api/JsonDtoMapper.JsonDtoMapperSettings.html#JsonDtoMapper_JsonDtoMapperSettings_JsonSerializerSettings
+  commentId: F:JsonDtoMapper.JsonDtoMapperSettings.JsonSerializerSettings
+  fullName: JsonDtoMapper.JsonDtoMapperSettings.JsonSerializerSettings
+  nameWithType: JsonDtoMapperSettings.JsonSerializerSettings
+- uid: JsonDtoMapper.JsonEntityMap`1
+  name: JsonEntityMap<T>
+  href: api/JsonDtoMapper.JsonEntityMap-1.html
+  commentId: T:JsonDtoMapper.JsonEntityMap`1
+  name.vb: JsonEntityMap(Of T)
+  fullName: JsonDtoMapper.JsonEntityMap<T>
+  fullName.vb: JsonDtoMapper.JsonEntityMap(Of T)
+  nameWithType: JsonEntityMap<T>
+  nameWithType.vb: JsonEntityMap(Of T)
+- uid: JsonDtoMapper.JsonEntityMap`1.#ctor(System.String)
+  name: JsonEntityMap(String)
+  href: api/JsonDtoMapper.JsonEntityMap-1.html#JsonDtoMapper_JsonEntityMap_1__ctor_System_String_
+  commentId: M:JsonDtoMapper.JsonEntityMap`1.#ctor(System.String)
+  fullName: JsonDtoMapper.JsonEntityMap<T>.JsonEntityMap(System.String)
+  fullName.vb: JsonDtoMapper.JsonEntityMap(Of T).JsonEntityMap(System.String)
+  nameWithType: JsonEntityMap<T>.JsonEntityMap(String)
+  nameWithType.vb: JsonEntityMap(Of T).JsonEntityMap(String)
+- uid: JsonDtoMapper.JsonEntityMap`1.#ctor*
+  name: JsonEntityMap
+  href: api/JsonDtoMapper.JsonEntityMap-1.html#JsonDtoMapper_JsonEntityMap_1__ctor_
+  commentId: Overload:JsonDtoMapper.JsonEntityMap`1.#ctor
+  isSpec: "True"
+  fullName: JsonDtoMapper.JsonEntityMap<T>.JsonEntityMap
+  fullName.vb: JsonDtoMapper.JsonEntityMap(Of T).JsonEntityMap
+  nameWithType: JsonEntityMap<T>.JsonEntityMap
+  nameWithType.vb: JsonEntityMap(Of T).JsonEntityMap
+- uid: JsonDtoMapper.JsonEntityMap`1.AssignComplex(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.String,System.String)
+  name: AssignComplex(Expression<Func<T, Object>>, String, String)
+  href: api/JsonDtoMapper.JsonEntityMap-1.html#JsonDtoMapper_JsonEntityMap_1_AssignComplex_System_Linq_Expressions_Expression_System_Func__0_System_Object___System_String_System_String_
+  commentId: M:JsonDtoMapper.JsonEntityMap`1.AssignComplex(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.String,System.String)
+  name.vb: AssignComplex(Expression(Of Func(Of T, Object)), String, String)
+  fullName: JsonDtoMapper.JsonEntityMap<T>.AssignComplex(System.Linq.Expressions.Expression<System.Func<T, System.Object>>, System.String, System.String)
+  fullName.vb: JsonDtoMapper.JsonEntityMap(Of T).AssignComplex(System.Linq.Expressions.Expression(Of System.Func(Of T, System.Object)), System.String, System.String)
+  nameWithType: JsonEntityMap<T>.AssignComplex(Expression<Func<T, Object>>, String, String)
+  nameWithType.vb: JsonEntityMap(Of T).AssignComplex(Expression(Of Func(Of T, Object)), String, String)
+- uid: JsonDtoMapper.JsonEntityMap`1.AssignComplex*
+  name: AssignComplex
+  href: api/JsonDtoMapper.JsonEntityMap-1.html#JsonDtoMapper_JsonEntityMap_1_AssignComplex_
+  commentId: Overload:JsonDtoMapper.JsonEntityMap`1.AssignComplex
+  isSpec: "True"
+  fullName: JsonDtoMapper.JsonEntityMap<T>.AssignComplex
+  fullName.vb: JsonDtoMapper.JsonEntityMap(Of T).AssignComplex
+  nameWithType: JsonEntityMap<T>.AssignComplex
+  nameWithType.vb: JsonEntityMap(Of T).AssignComplex
+- uid: JsonDtoMapper.JsonEntityMap`1.AssignPrimitive(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.String,System.Object,System.Func{`0,System.Object})
+  name: AssignPrimitive(Expression<Func<T, Object>>, String, Object, Func<T, Object>)
+  href: api/JsonDtoMapper.JsonEntityMap-1.html#JsonDtoMapper_JsonEntityMap_1_AssignPrimitive_System_Linq_Expressions_Expression_System_Func__0_System_Object___System_String_System_Object_System_Func__0_System_Object__
+  commentId: M:JsonDtoMapper.JsonEntityMap`1.AssignPrimitive(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.String,System.Object,System.Func{`0,System.Object})
+  name.vb: AssignPrimitive(Expression(Of Func(Of T, Object)), String, Object, Func(Of T, Object))
+  fullName: JsonDtoMapper.JsonEntityMap<T>.AssignPrimitive(System.Linq.Expressions.Expression<System.Func<T, System.Object>>, System.String, System.Object, System.Func<T, System.Object>)
+  fullName.vb: JsonDtoMapper.JsonEntityMap(Of T).AssignPrimitive(System.Linq.Expressions.Expression(Of System.Func(Of T, System.Object)), System.String, System.Object, System.Func(Of T, System.Object))
+  nameWithType: JsonEntityMap<T>.AssignPrimitive(Expression<Func<T, Object>>, String, Object, Func<T, Object>)
+  nameWithType.vb: JsonEntityMap(Of T).AssignPrimitive(Expression(Of Func(Of T, Object)), String, Object, Func(Of T, Object))
+- uid: JsonDtoMapper.JsonEntityMap`1.AssignPrimitive*
+  name: AssignPrimitive
+  href: api/JsonDtoMapper.JsonEntityMap-1.html#JsonDtoMapper_JsonEntityMap_1_AssignPrimitive_
+  commentId: Overload:JsonDtoMapper.JsonEntityMap`1.AssignPrimitive
+  isSpec: "True"
+  fullName: JsonDtoMapper.JsonEntityMap<T>.AssignPrimitive
+  fullName.vb: JsonDtoMapper.JsonEntityMap(Of T).AssignPrimitive
+  nameWithType: JsonEntityMap<T>.AssignPrimitive
+  nameWithType.vb: JsonEntityMap(Of T).AssignPrimitive
+- uid: JsonDtoMapper.JsonEntityMap`1.ID
+  name: ID
+  href: api/JsonDtoMapper.JsonEntityMap-1.html#JsonDtoMapper_JsonEntityMap_1_ID
+  commentId: P:JsonDtoMapper.JsonEntityMap`1.ID
+  fullName: JsonDtoMapper.JsonEntityMap<T>.ID
+  fullName.vb: JsonDtoMapper.JsonEntityMap(Of T).ID
+  nameWithType: JsonEntityMap<T>.ID
+  nameWithType.vb: JsonEntityMap(Of T).ID
+- uid: JsonDtoMapper.JsonEntityMap`1.ID*
+  name: ID
+  href: api/JsonDtoMapper.JsonEntityMap-1.html#JsonDtoMapper_JsonEntityMap_1_ID_
+  commentId: Overload:JsonDtoMapper.JsonEntityMap`1.ID
+  isSpec: "True"
+  fullName: JsonDtoMapper.JsonEntityMap<T>.ID
+  fullName.vb: JsonDtoMapper.JsonEntityMap(Of T).ID
+  nameWithType: JsonEntityMap<T>.ID
+  nameWithType.vb: JsonEntityMap(Of T).ID
+- uid: JsonDtoMapper.JsonEntityMap`1.Map(System.Object)
+  name: Map(Object)
+  href: api/JsonDtoMapper.JsonEntityMap-1.html#JsonDtoMapper_JsonEntityMap_1_Map_System_Object_
+  commentId: M:JsonDtoMapper.JsonEntityMap`1.Map(System.Object)
+  fullName: JsonDtoMapper.JsonEntityMap<T>.Map(System.Object)
+  fullName.vb: JsonDtoMapper.JsonEntityMap(Of T).Map(System.Object)
+  nameWithType: JsonEntityMap<T>.Map(Object)
+  nameWithType.vb: JsonEntityMap(Of T).Map(Object)
+- uid: JsonDtoMapper.JsonEntityMap`1.Map*
+  name: Map
+  href: api/JsonDtoMapper.JsonEntityMap-1.html#JsonDtoMapper_JsonEntityMap_1_Map_
+  commentId: Overload:JsonDtoMapper.JsonEntityMap`1.Map
+  isSpec: "True"
+  fullName: JsonDtoMapper.JsonEntityMap<T>.Map
+  fullName.vb: JsonDtoMapper.JsonEntityMap(Of T).Map
+  nameWithType: JsonEntityMap<T>.Map
+  nameWithType.vb: JsonEntityMap(Of T).Map
+- uid: JsonDtoMapper.JsonEntityMap`1.op_Implicit(JsonDtoMapper.JsonEntityMap{`0})~Newtonsoft.Json.Linq.JObject
+  name: Implicit(JsonEntityMap<T> to JObject)
+  href: api/JsonDtoMapper.JsonEntityMap-1.html#JsonDtoMapper_JsonEntityMap_1_op_Implicit_JsonDtoMapper_JsonEntityMap__0___Newtonsoft_Json_Linq_JObject
+  commentId: M:JsonDtoMapper.JsonEntityMap`1.op_Implicit(JsonDtoMapper.JsonEntityMap{`0})~Newtonsoft.Json.Linq.JObject
+  name.vb: Widening(JsonEntityMap(Of T) to JObject)
+  fullName: JsonDtoMapper.JsonEntityMap<T>.Implicit(JsonDtoMapper.JsonEntityMap<T> to Newtonsoft.Json.Linq.JObject)
+  fullName.vb: JsonDtoMapper.JsonEntityMap(Of T).Widening(JsonDtoMapper.JsonEntityMap(Of T) to Newtonsoft.Json.Linq.JObject)
+  nameWithType: JsonEntityMap<T>.Implicit(JsonEntityMap<T> to JObject)
+  nameWithType.vb: JsonEntityMap(Of T).Widening(JsonEntityMap(Of T) to JObject)
+- uid: JsonDtoMapper.JsonEntityMap`1.op_Implicit*
+  name: Implicit
+  href: api/JsonDtoMapper.JsonEntityMap-1.html#JsonDtoMapper_JsonEntityMap_1_op_Implicit_
+  commentId: Overload:JsonDtoMapper.JsonEntityMap`1.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: JsonDtoMapper.JsonEntityMap<T>.Implicit
+  fullName.vb: JsonDtoMapper.JsonEntityMap(Of T).Widening
+  nameWithType: JsonEntityMap<T>.Implicit
+  nameWithType.vb: JsonEntityMap(Of T).Widening

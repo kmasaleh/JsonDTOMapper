@@ -1,0 +1,431 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title> </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content=" ">
+    <meta name="generator" content="docfx 2.44.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<pre><code class="lang-csharp">using JsonDtoMapper;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+
+namespace JsonDtoMapperTest
+{
+ 
+    public class Customer
+    {
+        public int ID;
+        public String Name;
+        public String Address;
+        public String Phone;
+
+        public const string MapID1 = &quot;707BE537-D0FF-42DD-B453-F2B4FEA91F11&quot;;
+        public const string MapID2 = &quot;3E23B55D-5EF5-4269-B3BF-DFADAAFD52BA&quot;;
+
+
+        
+    }
+    public class Order
+    {
+        public int ID;
+        public Customer Customer;
+        public DateTime? IssueDate;
+        public String ShipAddress;
+        public List&lt;OrderDetail&gt; Details = new List&lt;OrderDetail&gt;();
+        public const string MapID1 = &quot;7E631986-879C-424A-80A8-5F322D4528DE&quot;;
+        public const string MapID2 = &quot;A9F3976D-B7E8-4B6F-BF7E-ED4C66B2D0D6&quot;;
+
+
+    }
+    public class OrderDetail
+    {
+        public Order Order;
+        public Product Product;
+        public Double? Qty;
+        public Double? Price;
+
+        public const string MapID1 = &quot;29BFF221-BCC1-47C4-AEC8-E3099DD40E33&quot;;
+        public const string MapID2 = &quot;900EC2EA-6131-4830-90B5-4A90BC2AFCFE&quot;;
+
+    }
+
+    //[JsonObject(IsReference = false)]
+    public class Store 
+    {
+        public int ID;
+        public String Name;
+        public List&lt;Product&gt; Products = new List&lt;Product&gt;();
+        public const string MapID1 = &quot;F11F2D7D-D9FF-443A-BA0C-CD8AFC67384F&quot;;
+        public const string MapID2 = &quot;BFD43416-9F77-4041-9289-4F490CEE9848&quot;;
+
+    }
+
+
+    //[JsonObject(IsReference = false)]
+    public class Product 
+    {
+        public int ID;
+        public String Name;
+        public String Code;
+        public Double? Price;
+        public int AvailableQty;
+        public DateTime? ValidityDate;
+        public Store Store;
+
+
+        public const string MapID1 = &quot;9C5AA917-DE2B-4233-A0AB-2D501D237698&quot;;
+        public const string MapID2 = &quot;663BB4BE-FDB6-403B-B2F0-E026AD1653E1&quot;;
+
+
+
+
+    }
+    class Program
+    {
+
+        static public void RegisterMappers()
+        {
+            //Register single map api
+            JsonDtoMapper.JsonDtoMapper.RegisterMapper(
+                //fluent way
+                new JsonEntityMap&lt;Customer&gt;(Customer.MapID1)
+                .AssignPrimitive(c =&gt; c.ID)
+                .AssignPrimitive(c =&gt; c.Name)
+                .AssignPrimitive(c =&gt; c.Phone)
+                );
+
+            //traditional way
+            JsonEntityMap&lt;Customer&gt; map2 = new JsonEntityMap&lt;Customer&gt;(Customer.MapID2);
+            map2.AssignPrimitive(c =&gt; c.ID);
+            map2.AssignPrimitive(c =&gt; c.Name);
+            JsonDtoMapper.JsonDtoMapper.RegisterMapper(map2);
+
+
+            //Register a punch of diffrent mappers
+            JsonDtoMapper.JsonDtoMapper.RegisterMappers(
+                new IEntityMap[]
+                {
+                    new JsonEntityMap&lt;Product&gt;(Product.MapID1)
+                        .AssignPrimitive(p=&gt;p.ID)
+                        .AssignPrimitive(p=&gt;p.Name)
+                        .AssignPrimitive(p=&gt;p.Code)
+                        //null value sample
+                        .AssignPrimitive(p=&gt;p.Price,null,0.0)
+                        //null value sample
+                        .AssignPrimitive(p=&gt;p.ValidityDate,null,DateTime.Now.AddYears(3)  )
+                        //Create property on the fly using value provider handler 
+                        .AssignPrimitive(null,&quot;Name_And_ID&quot;,null,p=&gt; p.ID + &quot;_&quot; + p.Name    )
+                        //alternative property name
+                        .AssignComplex(p=&gt;p.Store,Store.MapID1, &quot;Product Store&quot;)
+                    ,
+                    new JsonEntityMap&lt;Product&gt;(Product.MapID2)
+                        .AssignPrimitive(p=&gt;p.ID)
+                        .AssignPrimitive(p=&gt;p.Name)
+                        .AssignPrimitive(p=&gt;p.Code)
+                    ,
+
+                    new JsonEntityMap&lt;Order&gt;(Order.MapID1)
+                        .AssignPrimitive(o=&gt;o.ID)
+                        .AssignPrimitive(o=&gt;o.IssueDate,null,DateTime.Now)
+                        .AssignPrimitive(o=&gt;o.ShipAddress)
+                        .AssignComplex(o=&gt;o.Customer,Customer.MapID1)
+                        .AssignComplex(o=&gt;o.Details,OrderDetail.MapID1)
+                    ,
+                    new JsonEntityMap&lt;OrderDetail&gt;(OrderDetail.MapID1)
+                        .AssignPrimitive(od=&gt;od.Product.Name,&quot;ProductName&quot;)
+                        .AssignPrimitive(od=&gt;od.Product.Code,&quot;ProductCode&quot;)
+                        //nullvalue =1
+                        .AssignPrimitive(od=&gt;od.Qty,null,1)
+                        .AssignPrimitive(od=&gt;od.Price)
+                        .AssignComplex(od=&gt;od.Product,Product.MapID1)
+                        
+                    ,
+                    new JsonEntityMap&lt;Store&gt;(Store.MapID1)
+                        .AssignPrimitive(s =&gt; s.ID)
+                        .AssignPrimitive(s =&gt; s.Name)
+                        //using a diffirent map for the same type (Product)
+                        //using an alternative property name
+                        .AssignComplex(s=&gt;s.Products,Product.MapID2,&quot;All Products In Store&quot;)
+        }
+                );
+
+
+
+
+        }
+
+
+
+        static void Main(string[] args)
+        {
+
+            RegisterMappers();
+            
+            
+            Product product1 = new Product() { ID=1,Name=&quot;Product 1&quot;,Code=&quot;ABC_001&quot;, Price=102.25,AvailableQty=85,ValidityDate = new DateTime(2025,1,1)};
+            Store store1 = new Store() { ID = 9, Name = &quot;Store1&quot; }; ;
+            product1.Store = store1;
+            store1.Products.Add(product1);
+            
+            Product product2 = new Product() { ID = 2, Code=&quot;DEF_002&quot;,Name = &quot;Product 2&quot;, AvailableQty = 5 };
+            product2.Store = store1;
+            store1.Products.Add(product2);
+
+            Product product3 = new Product() { ID = 3, Code = &quot;GHI_003&quot;, Name = &quot;Product 3&quot;, AvailableQty = 39 };
+            product2.Store = store1;
+            store1.Products.Add(product3);
+
+            //IssueDate = null
+            Order order = new Order() { ID = 1, IssueDate = null, ShipAddress = &quot;P.O. Box 555&quot;};
+            OrderDetail orderDetail1 = new OrderDetail() { Product = product1, Price = 5.0, Qty = 2 ,Order=order};
+            OrderDetail orderDetail2 = new OrderDetail() { Product = product2, Price = 75.0, Qty = 5, Order = order };
+            OrderDetail orderDetail3 = new OrderDetail() { Product = product3, Price = 9.25,  Order = order };
+            order.Details.Add(orderDetail1);
+            order.Details.Add(orderDetail2);
+            order.Details.Add(orderDetail3);
+
+            Customer customer = new Customer() { ID = 1, Address = &quot;24, place victory&quot;, Name = &quot;Bon Jovi&quot;, Phone = &quot;(1) 135-5555&quot; };
+            order.Customer = customer;
+
+            JsonDtoMapper.JsonDtoMapper.Settings.JsonSerializerSettings = new JsonSerializerSettings();
+            JsonDtoMapper.JsonDtoMapper.Settings.JsonSerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            JsonDtoMapper.JsonDtoMapper.Settings.JsonSerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.All;
+
+
+            var c = JsonDtoMapper.JsonDtoMapper.Map( order, Order.MapID1);
+            Console.WriteLine(c);
+            
+            
+            //if you want to keep the output json into file to examin 
+            File.WriteAllText(&quot;output.txt&quot;, c.ToString());
+
+
+
+
+            Order OrderFromJson = Newtonsoft.Json.JsonConvert.DeserializeObject&lt;Order&gt;(c.ToString());
+
+
+
+
+
+            
+            //year,month,day is the same since IssueDate was null and the default value is DateTime.Now
+            Debug.Assert(OrderFromJson.IssueDate.Value.ToShortDateString()== DateTime.Now.ToShortDateString());
+
+            //Dynamic property had been created
+            JToken f = c.SelectToken(&quot;$.Details[?(@.ProductName=='Product 1')]&quot;);
+
+            //Todo : more assertions to test all the specs.
+
+
+            while (Console.ReadLine() != &quot;q&quot;)
+                ;
+        }
+    }
+}
+
+
+
+//Output  JSON, [Note ] :dates may be diffirent from yours.
+{
+  &quot;ID&quot;: 1,
+  &quot;IssueDate&quot;: &quot;2019-08-12T13:18:25.7107008+02:00&quot;,
+  &quot;ShipAddress&quot;: &quot;P.O. Box 555&quot;,
+  &quot;Customer&quot;: {
+    &quot;ID&quot;: 1,
+    &quot;Name&quot;: &quot;Bon Jovi&quot;,
+    &quot;Phone&quot;: &quot;(1) 135-5555&quot;
+  },
+  &quot;Details&quot;: [
+    {
+      &quot;ProductName&quot;: &quot;Product 1&quot;,
+      &quot;ProductCode&quot;: &quot;ABC_001&quot;,
+      &quot;Qty&quot;: 2.0,
+      &quot;Price&quot;: 5.0,
+      &quot;Product&quot;: {
+        &quot;ID&quot;: 1,
+        &quot;Name&quot;: &quot;Product 1&quot;,
+        &quot;Code&quot;: &quot;ABC_001&quot;,
+        &quot;Price&quot;: 102.25,
+        &quot;ValidityDate&quot;: &quot;2025-01-01T00:00:00&quot;,
+        &quot;Name_And_ID&quot;: &quot;1_Product 1&quot;,
+        &quot;Product Store&quot;: {
+          &quot;ID&quot;: 9,
+          &quot;Name&quot;: &quot;Store1&quot;,
+          &quot;All Products In Store&quot;: [
+            {
+              &quot;ID&quot;: 1,
+              &quot;Name&quot;: &quot;Product 1&quot;,
+              &quot;Code&quot;: &quot;ABC_001&quot;
+            },
+            {
+              &quot;ID&quot;: 2,
+              &quot;Name&quot;: &quot;Product 2&quot;,
+              &quot;Code&quot;: &quot;DEF_002&quot;
+            },
+            {
+              &quot;ID&quot;: 3,
+              &quot;Name&quot;: &quot;Product 3&quot;,
+              &quot;Code&quot;: &quot;GHI_003&quot;
+            }
+          ]
+        }
+      }
+    },
+    {
+      &quot;ProductName&quot;: &quot;Product 2&quot;,
+      &quot;ProductCode&quot;: &quot;DEF_002&quot;,
+      &quot;Qty&quot;: 5.0,
+      &quot;Price&quot;: 75.0,
+      &quot;Product&quot;: {
+        &quot;ID&quot;: 2,
+        &quot;Name&quot;: &quot;Product 2&quot;,
+        &quot;Code&quot;: &quot;DEF_002&quot;,
+        &quot;Price&quot;: 0.0,
+        &quot;ValidityDate&quot;: &quot;2022-08-12T13:18:25.7087008+02:00&quot;,
+        &quot;Name_And_ID&quot;: &quot;2_Product 2&quot;,
+        &quot;Product Store&quot;: {
+          &quot;ID&quot;: 9,
+          &quot;Name&quot;: &quot;Store1&quot;,
+          &quot;All Products In Store&quot;: [
+            {
+              &quot;ID&quot;: 1,
+              &quot;Name&quot;: &quot;Product 1&quot;,
+              &quot;Code&quot;: &quot;ABC_001&quot;
+            },
+            {
+              &quot;ID&quot;: 2,
+              &quot;Name&quot;: &quot;Product 2&quot;,
+              &quot;Code&quot;: &quot;DEF_002&quot;
+            },
+            {
+              &quot;ID&quot;: 3,
+              &quot;Name&quot;: &quot;Product 3&quot;,
+              &quot;Code&quot;: &quot;GHI_003&quot;
+            }
+          ]
+        }
+      }
+    },
+    {
+      &quot;ProductName&quot;: &quot;Product 3&quot;,
+      &quot;ProductCode&quot;: &quot;GHI_003&quot;,
+      &quot;Qty&quot;: 1,
+      &quot;Price&quot;: 9.25,
+      &quot;Product&quot;: {
+        &quot;ID&quot;: 3,
+        &quot;Name&quot;: &quot;Product 3&quot;,
+        &quot;Code&quot;: &quot;GHI_003&quot;,
+        &quot;Price&quot;: 0.0,
+        &quot;ValidityDate&quot;: &quot;2022-08-12T13:18:25.7087008+02:00&quot;,
+        &quot;Name_And_ID&quot;: &quot;3_Product 3&quot;,
+        &quot;Product Store&quot;: null
+      }
+    }
+  ]
+}
+
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,490 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class JsonEntityMap&lt;T&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class JsonEntityMap&lt;T&gt;
+   ">
+    <meta name="generator" content="docfx 2.44.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="JsonDtoMapper.JsonEntityMap`1">
+  
+  
+  <h1 id="JsonDtoMapper_JsonEntityMap_1" data-uid="JsonDtoMapper.JsonEntityMap`1" class="text-break">Class JsonEntityMap&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Basic mapper class that implements  <a class="xref" href="JsonDtoMapper.IEntityMap.html">IEntityMap</a> interface
+and contains all the logic for the mapping process.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">JsonEntityMap&lt;T&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="JsonDtoMapper.IEntityMap.html">IEntityMap</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="JsonDtoMapper.html">JsonDtoMapper</a></h6>
+  <h6><strong>Assembly</strong>: JsonDtoMapper.dll</h6>
+  <h5 id="JsonDtoMapper_JsonEntityMap_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class JsonEntityMap&lt;T&gt; : IEntityMap</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Any object type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="JsonDtoMapper_JsonEntityMap_1__ctor_" data-uid="JsonDtoMapper.JsonEntityMap`1.#ctor*"></a>
+  <h4 id="JsonDtoMapper_JsonEntityMap_1__ctor_System_String_" data-uid="JsonDtoMapper.JsonEntityMap`1.#ctor(System.String)">JsonEntityMap(String)</h4>
+  <div class="markdown level1 summary"><p>Class constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JsonEntityMap(string ID)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">ID</span></td>
+        <td><p>String represents a unique identity for the map</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><p>Thrown if the map is empty or null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="JsonDtoMapper_JsonEntityMap_1_ID_" data-uid="JsonDtoMapper.JsonEntityMap`1.ID*"></a>
+  <h4 id="JsonDtoMapper_JsonEntityMap_1_ID" data-uid="JsonDtoMapper.JsonEntityMap`1.ID">ID</h4>
+  <div class="markdown level1 summary"><p>Map identity</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ID { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>A string represents a unique identity for the map</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="JsonDtoMapper_JsonEntityMap_1_AssignComplex_" data-uid="JsonDtoMapper.JsonEntityMap`1.AssignComplex*"></a>
+  <h4 id="JsonDtoMapper_JsonEntityMap_1_AssignComplex_System_Linq_Expressions_Expression_System_Func__0_System_Object___System_String_System_String_" data-uid="JsonDtoMapper.JsonEntityMap`1.AssignComplex(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.String,System.String)">AssignComplex(Expression&lt;Func&lt;T, Object&gt;&gt;, String, String)</h4>
+  <div class="markdown level1 summary"><p>Assigns a complex property from the source object to be mapped,
+A complex property is a class based object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JsonEntityMap&lt;T&gt; AssignComplex(Expression&lt;Func&lt;T, object&gt;&gt; Exp, string Map = null, string PropertyName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Linq.Expressions.Expression</span>&lt;<span class="xref">System.Func</span>&lt;T, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="parametername">Exp</span></td>
+        <td><p>An Expression that denotes a tree data structure for a lambda expression
+which accept an entity type and returns a property inside that type</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">Map</span></td>
+        <td><p>The identity of map used to convert the complex object</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">PropertyName</span></td>
+        <td><p>The property name in the returned object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JsonDtoMapper.JsonEntityMap-1.html">JsonEntityMap</a>&lt;T&gt;</td>
+        <td><p>An instance of the same JsonEntityMap object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="JsonDtoMapper_JsonEntityMap_1_AssignComplex_System_Linq_Expressions_Expression_System_Func__0_System_Object___System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul><li>If the <strong>Map</strong> parameter is null the object will be fully converted as is</li><li>If the <strong>PropertyName</strong> parameter is null the mapper will use the existed property name</li></ul>
+</div>
+  
+  
+  <a id="JsonDtoMapper_JsonEntityMap_1_AssignPrimitive_" data-uid="JsonDtoMapper.JsonEntityMap`1.AssignPrimitive*"></a>
+  <h4 id="JsonDtoMapper_JsonEntityMap_1_AssignPrimitive_System_Linq_Expressions_Expression_System_Func__0_System_Object___System_String_System_Object_System_Func__0_System_Object__" data-uid="JsonDtoMapper.JsonEntityMap`1.AssignPrimitive(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.String,System.Object,System.Func{`0,System.Object})">AssignPrimitive(Expression&lt;Func&lt;T, Object&gt;&gt;, String, Object, Func&lt;T, Object&gt;)</h4>
+  <div class="markdown level1 summary"><p>Assigns a value property from the source object to be mapped.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JsonEntityMap&lt;T&gt; AssignPrimitive(Expression&lt;Func&lt;T, object&gt;&gt; Exp, string PropertyName = null, object NullValue = null, Func&lt;T, object&gt; Handler = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Linq.Expressions.Expression</span>&lt;<span class="xref">System.Func</span>&lt;T, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="parametername">Exp</span></td>
+        <td><p>An Expression that denotes a tree data structure for a lambda expression
+which accept an entity type and returns a property inside that type</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">PropertyName</span></td>
+        <td><p>The property name in the returned object</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">NullValue</span></td>
+        <td><p>The vlaue returned if the property is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="parametername">Handler</span></td>
+        <td><p>A delegate that accepts an instance of the source object and returns
+whatever value to be assigned in the target object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JsonDtoMapper.JsonEntityMap-1.html">JsonEntityMap</a>&lt;T&gt;</td>
+        <td><p>This object instance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="JsonDtoMapper_JsonEntityMap_1_AssignPrimitive_System_Linq_Expressions_Expression_System_Func__0_System_Object___System_String_System_Object_System_Func__0_System_Object___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul><li>If the <strong>PropertyName</strong> parameter is null the mapper will use the existed property name</li><li>If the <strong>NullValue</strong> parameter is null a (null) value will be assigned </li><li>
+If the <strong>Handler</strong> parameter is null the original value of the property will be returned
+</li></ul>
+</div>
+  
+  
+  <a id="JsonDtoMapper_JsonEntityMap_1_Map_" data-uid="JsonDtoMapper.JsonEntityMap`1.Map*"></a>
+  <h4 id="JsonDtoMapper_JsonEntityMap_1_Map_System_Object_" data-uid="JsonDtoMapper.JsonEntityMap`1.Map(System.Object)">Map(Object)</h4>
+  <div class="markdown level1 summary"><p>Map method that do the actuall object mapping</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JObject Map(object This)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">This</span></td>
+        <td><p>Object instance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Newtonsoft.Json.Linq.JObject</span></td>
+        <td><p>JSON DTO object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.InvalidDataException</span></td>
+        <td><p>Thrown when This param is<br>
+not the same type of the declared generic type of the map.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  
+  
+  <a id="JsonDtoMapper_JsonEntityMap_1_op_Implicit_" data-uid="JsonDtoMapper.JsonEntityMap`1.op_Implicit*"></a>
+  <h4 id="JsonDtoMapper_JsonEntityMap_1_op_Implicit_JsonDtoMapper_JsonEntityMap__0___Newtonsoft_Json_Linq_JObject" data-uid="JsonDtoMapper.JsonEntityMap`1.op_Implicit(JsonDtoMapper.JsonEntityMap{`0})~Newtonsoft.Json.Linq.JObject">Implicit(JsonEntityMap&lt;T&gt; to JObject)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator JObject(JsonEntityMap&lt;T&gt; This)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JsonDtoMapper.JsonEntityMap-1.html">JsonEntityMap</a>&lt;T&gt;</td>
+        <td><span class="parametername">This</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Newtonsoft.Json.Linq.JObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="JsonDtoMapper.IEntityMap.html">IEntityMap</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
