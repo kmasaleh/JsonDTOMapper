@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/sampleCode.html",
-          "hash": "P3pKT4+2VtwxvxavP7xw9g=="
+          "hash": "pXieXFSyBwnSBK9MJj+EvA=="
         }
       },
       "is_incremental": false,
@@ -157,6 +157,13 @@
         "skipped_file_count": 0
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
@@ -168,13 +175,6 @@
           "incrementalPhase": "build",
           "total_file_count": 4,
           "skipped_file_count": 3
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
         }
       }
     },
